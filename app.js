@@ -92,10 +92,23 @@
       </div></section>
 
       <section class="blok putih"><div class="wrap grid g2" style="align-items:center">
-        <div>${D.video.youtubeId
-          ? `<iframe class="map" src="https://www.youtube.com/embed/${esc(D.video.youtubeId)}" title="${esc(D.video.judul)}" allowfullscreen loading="lazy"></iframe>`
-          : `<div class="map mapkosong">Saluran informasi publik Pemerintah ${esc(nm)}</div>`}</div>
-        <div><h2>Informasi publik</h2><h3>${esc(D.video.judul)}</h3><p>${esc(D.video.deskripsi)}</p></div>
+        <div>
+          ${D.video.youtubeId
+            ? `<div class="video-preview" onclick="this.innerHTML='<iframe class=\\'video-frame\\' src=\\'https://www.youtube.com/embed/${esc(D.video.youtubeId)}?autoplay=1\\' allow=\\'autoplay; encrypted-media; picture-in-picture\\' allowfullscreen></iframe>'" title="Klik untuk memutar video">
+                <img src="${esc(D.video.thumbnail || D.hero || 'assets/hero.jpg')}" alt="${esc(D.video.judul)}">
+                <div class="play-btn-wrap">
+                  <span class="play-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg></span>
+                  <span class="play-label">Tonton Video Profil</span>
+                </div>
+              </div>`
+            : `<figure style="margin:0">${gambar(D.fotoKantor || D.hero, D.video.judul)}<figcaption style="font-size:0.84rem;color:var(--redup);margin-top:0.4rem;font-style:italic">Dokumentasi ${esc(nm)}</figcaption></figure>`}
+        </div>
+        <div>
+          <h2>Informasi publik</h2>
+          <h3>${esc(D.video.judul)}</h3>
+          <p>${esc(D.video.deskripsi)}</p>
+          ${D.video.youtubeId ? `<p style="margin-top:1.1rem"><a class="btn dark" href="https://www.youtube.com/watch?v=${esc(D.video.youtubeId)}" target="_blank" rel="noopener">Buka di YouTube ↗</a></p>` : ""}
+        </div>
       </div></section>`;
     },
 

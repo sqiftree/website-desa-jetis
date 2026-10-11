@@ -265,8 +265,9 @@ const DATA = {
   ],
   video: {
     judul: "Profil Wilayah dan Pelayanan Masyarakat Desa Jetis",
-    deskripsi: "Gambaran menyeluruh mengenai kehidupan warga, tata kelola pemerintahan, potensi kawasan industri dan agraris di Desa Jetis, Kecamatan Jaten, Kabupaten Karanganyar.",
-    youtubeId: ""
+    deskripsi: "Gambaran menyeluruh mengenai kehidupan warga, potensi wilayah, tata kelola pemerintahan, serta sarana prasarana di Desa Jetis, Kecamatan Jaten, Kabupaten Karanganyar.",
+    youtubeId: "0i78yxSM2as",
+    thumbnail: "assets/hero.jpg"
   },
 
   // ---------- BERITA, PENGUMUMAN, GALERI ----------
