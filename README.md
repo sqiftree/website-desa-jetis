@@ -1,22 +1,130 @@
-# Website Kelurahan (Tugas Kelompok)
+# Website Desa Jetis
 
-Website statis (HTML + CSS + JavaScript), tanpa database dan tanpa install apa pun.
+> Portal Resmi Informasi Publik dan Pelayanan Administrasi Terpadu  
+> **Desa Jetis, Kecamatan Jaten, Kabupaten Karanganyar, Jawa Tengah 57771**
 
-## Menjalankan di localhost
-Pilih salah satu:
-1. **Paling mudah:** klik dua kali `index.html`.
-2. **Server lokal (disarankan):** buka terminal di folder ini, lalu
-   - Python: `python -m http.server 8000`
-   - Node: `npx serve`
-   kemudian buka http://localhost:8000
+[![Live Demo](https://img.shields.io/badge/Demo-GitHub%20Pages-234E3F?style=flat-square)](https://sqiftree.github.io/website-desa-jetis/)
+[![Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20Vanilla%20JS-1B2A41?style=flat-square)](https://github.com/sqiftree/website-desa-jetis)
+[![Dependencies](https://img.shields.io/badge/Dependencies-Zero-B8892B?style=flat-square)](https://github.com/sqiftree/website-desa-jetis)
+[![License](https://img.shields.io/badge/License-MIT-gray?style=flat-square)](LICENSE)
 
-## Cara mengisi data
-Semua isi website ada di **`data.js`**. Cari teks `[ISI ...]` lalu ganti dengan data asli kelurahan.
-- Kelompok 8 (genap) → Kecamatan Jaten, Kabupaten Karanganyar (sudah diatur). Kelompok ganjil → Mojolaban, Kabupaten Sukoharjo.
-- Foto: taruh di folder `assets/`, lalu tulis path-nya, mis. `"assets/foto1.jpg"`.
-- Peta: Google Maps → Bagikan → Sematkan peta → salin isi `src="..."` ke `petaEmbed`.
-- Banner kuning di atas halaman hilang otomatis setelah semua `[ISI` terganti.
+🌐 **Akses Website Langsung:** [https://sqiftree.github.io/website-desa-jetis/](https://sqiftree.github.io/website-desa-jetis/)
 
-## Halaman
-Beranda · Profil (sejarah, visi-misi, tugas-fungsi, lembaga) · Struktur organisasi ·
-Data wilayah & monografi · Layanan · Berita (cari + filter + detail) · Galeri · Kontak.
+---
+
+## 📌 Ringkasan Proyek
+
+Website ini dibangun sebagai portal digital resmi untuk menghadirkan transparansi informasi publik, pengenalan profil wilayah, serta panduan layanan administrasi terpadu bagi warga **Desa Jetis**, Kecamatan Jaten, Kabupaten Karanganyar.
+
+Dikembangkan dengan arsitektur **Zero-Dependency Vanilla Web** murni (HTML5, CSS3 kustom, dan Vanilla JavaScript ES6+) sehingga memiliki performa beban halaman yang sangat ringan (*ultra-fast load time*), ramah aksesibilitas, serta tidak memerlukan konfigurasi server yang rumit. Desain antarmuka mengadopsi estetika tipografi bersih terinspirasi *Last.fm* (font reguler bersih, micro-kickers kapital, dan garis pembatas minimalis) yang dipadukan dengan palet warna resmi pedesaan Karanganyar (*padi, emas, dan navy*).
+
+---
+
+## ✨ Fitur Utama
+
+- **Beranda & Ringkasan Wilayah:**
+  - Banner informasi dan ringkasan metrik demografi desa (6.253 jiwa, 1.850 KK, 14 RW, 64 RT, luas 262,61 Ha).
+  - Sekilas sejarah, visi desa, dan galeri pendopo balai desa di Dusun Gempol Rejo.
+  - Kartu akses cepat layanan kependudukan dan daftar penghargaan resmi.
+
+- **Profil Wilayah & Sejarah Otentik:**
+  - Catatan sejarah asal mula Dusun Nilorejo (era kolonial Belanda) dan Dusun Jetis Kulon sebagai sentra penggilingan padi masa Mbah Demang.
+  - Sejarah pemindahan pusat Balai Desa ke Dusun Gempol Rejo pada tahun 1970-an oleh Kades Taryoko.
+  - Visi, misi pembangunan, tugas pokok, fungsi, dan lembaga kemasyarakatan (BPD, LPMD, PKK, Karang Taruna, Linmas).
+
+- **Struktur Organisasi Pemerintahan:**
+  - Bagan hierarki kepemimpinan Pemerintah Desa Jetis mulai dari Kepala Desa (Nur Wibowo, S.T.), Sekretaris Desa (Triyanto, S.E.), jajaran Kepala Seksi (Kasi), Kepala Urusan (Kaur), hingga para Kepala Dusun (Kadus).
+
+- **Data Wilayah & Monografi Kependudukan:**
+  - Tabel batas wilayah geografis (Desa Brujul, Desa Dagen, Desa Ngringo, Kec. Tasikmadu) dan 12 dusun.
+  - Visualisasi batang distribusi penggunaan lahan, komposisi agama, jenjang pendidikan, serta mata pencaharian penduduk.
+  - Direktori sarana dan prasarana pendidikan, kesehatan, peribadatan, dan fasilitas umum desa.
+
+- **Layanan Administrasi Kependudukan:**
+  - Panduan persyaratan berkas dan estimasi waktu penyelesaian (Akta Kelahiran 3–6 hari, Pengantar KTP-el & KK, Pengantar Nikah Model N ke KUA, Surat Keterangan Kematian, Pindah-Datang SKPWNI, dan SKU/SKTM).
+  - Jadwal operasional loket pelayanan kantor desa.
+
+- **Publikasi, Berita & Pengumuman:**
+  - Portal artikel kegiatan resmi dengan fitur pencarian teks instan (*live search*) dan filter kategori dinamis.
+  - Halaman baca detail artikel berita dan papan pengumuman resmi berkala.
+
+- **Galeri Dokumentasi & Media:**
+  - Album foto dokumentasi kegiatan fisik, musyawarah, dan pelayanan posyandu yang dilengkapi fitur tampilan *lightbox* interaktif.
+
+- **Kontak & Lokasi Terintegrasi:**
+  - Informasi kontak resmi, alamat balai desa, kanal email, WhatsApp, formulir aspirasi warga terpadu, serta peta Google Maps interaktif.
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+| Komponen | Teknologi | Keterangan |
+| :--- | :--- | :--- |
+| **Struktur** | Semantic HTML5 | Mengutamakan A11y, heading hierarkis, dan struktur SEO |
+| **Gaya & Layout** | Vanilla CSS3 | CSS Variables, CSS Grid, Flexbox, clamp typography, tanpa framework CSS |
+| **Tipografi** | Google Fonts | *Barlow* (Headings & Display) & *Inter* (Body Copy) |
+| **Logika & Router** | Vanilla JavaScript (ES6+) | Single-Page Application (SPA) berbasis Hash Router (`#/`) |
+| **Penyimpanan Data** | JavaScript Object (`data.js`) | Pemisahan data konten yang modular dan mudah dimutakhirkan |
+| **Hosting** | GitHub Pages | Hosting statis otomatis berkecepatan tinggi dengan sertifikat SSL/HTTPS |
+
+---
+
+## 📂 Struktur Berkas
+
+```text
+website-desa-jetis/
+├── assets/
+│   ├── hero.jpg          # Foto lanskap persawahan & wilayah
+│   ├── kantor.jpg        # Foto otentik Pendopo Balai Desa Jetis
+│   ├── kerjabakti.jpg    # Dokumentasi program kebersihan & TPST 3R
+│   ├── musyawarah.jpg    # Dokumentasi rapat perangkat desa & sosialisasi
+│   └── posyandu.jpg      # Dokumentasi posyandu lansia & balita
+├── data.js               # Berkas konfigurasi data, profil, monografi, & berita
+├── app.js                # Router SPA, komponen rendering, dan event handling
+├── index.html            # Berkas HTML utama
+├── style.css             # Sistem desain dan styling antarmuka
+├── .gitignore            # Berkas filter git
+└── README.md             # Dokumentasi proyek
+```
+
+---
+
+## 🚀 Panduan Menjalankan Secara Lokal
+
+Website ini bersifat statis murni sehingga **tidak memerlukan tahapan instalasi (`npm install`) maupun kompilasi build**.
+
+### Opsi 1: Buka Langsung di Browser
+Klik dua kali berkas `index.html` pada File Explorer Anda, atau seret berkas tersebut ke peramban (Chrome, Edge, Firefox).
+
+### Opsi 2: Menggunakan Server Lokal (Disarankan)
+Buka terminal pada direktori proyek, lalu jalankan salah satu perintah berikut:
+
+**Menggunakan Python:**
+```bash
+python -m http.server 8000
+```
+Buka peramban di: `http://localhost:8000`
+
+**Menggunakan Node.js:**
+```bash
+npx serve
+```
+Buka URL lokal yang muncul pada terminal (biasanya `http://localhost:3000`).
+
+---
+
+## 📚 Sumber Data & Referensi
+
+Data dan monografi yang disajikan pada website ini disadur dari catatan publik resmi:
+1. **Wikipedia Indonesia:** [Jetis, Jaten, Karanganyar](https://id.wikipedia.org/wiki/Jetis,_Jaten,_Karanganyar)
+2. **Portal Informasi Resmi Desa Jetis:** [jetisjaten.blogspot.com](https://jetisjaten.blogspot.com/)
+3. **Pemerintah Kabupaten Karanganyar:** [karanganyarkab.go.id](https://www.karanganyarkab.go.id)
+
+---
+
+## 📄 Hak Cipta & Pengembang
+
+Proyek ini disusun untuk tugas pembuatan website profil kelurahan/desa oleh:
+- **Wilayah:** Desa Jetis, Kecamatan Jaten, Kabupaten Karanganyar
+- **Kelompok:** Kelompok 8
+- **Pengembang:** [@sqiftree](https://github.com/sqiftree)
