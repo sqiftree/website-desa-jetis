@@ -43,7 +43,7 @@
         <a class="btn ghost" href="#/profil">Profil ${esc(D.jenis.toLowerCase())}</a>
       </div></section>
 
-      <div class="statline"><div class="wrap grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0">
+      <div class="statline"><div class="wrap statgrid">
         <div class="stat"><b>${fmt(dm.total)}</b><span>Jumlah penduduk</span></div>
         <div class="stat"><b>${fmt(dm.kepalaKeluarga)}</b><span>Kepala keluarga</span></div>
         <div class="stat"><b>${esc(w.jumlahRW)}</b><span>RW</span></div>
@@ -84,7 +84,7 @@
           : `<div class="card doc-card"><span class="badge-tag">Dokumen Resmi</span><h3>${esc(d.judul)}</h3><span class="meta">Tersedia di loket kantor desa</span></div>`).join("")}</div>
       </div></section>
 
-      <section class="blok"><div class="wrap grid g2" style="grid-template-columns:2fr 1fr;align-items:start">
+      <section class="blok"><div class="wrap grid g-news">
         <div><div class="head"><h2>Berita terkini</h2><a href="#/berita">Semua berita</a></div>
           <div class="grid g2">${terbaru.map(beritaCard).join("")}</div></div>
         <div><div class="head"><h2>Pengumuman</h2></div><ul class="pengumuman">${D.pengumuman.map(p =>

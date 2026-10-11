@@ -194,19 +194,29 @@ nav a[aria-current=page] {
 
 .menu-btn {
   display: none;
-  background: none;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   color: #fff;
   border-radius: var(--r);
-  padding: 0.4rem 0.8rem;
+  padding: 0.45rem 0.9rem;
   font: inherit;
   font-family: var(--heading);
   font-weight: 600;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background-color .15s ease;
+}
+
+.menu-btn:hover,
+.menu-btn:active {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 860px) {
   .menu-btn {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
   }
   nav {
     display: none;
@@ -214,13 +224,37 @@ nav a[aria-current=page] {
     left: 0;
     right: 0;
     top: 100%;
-    background: var(--padi);
+    background: #1B3F32;
     flex-direction: column;
-    padding: 0.5rem 1.25rem 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 0.75rem 1rem 1.25rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    border-bottom: 2px solid var(--emas);
+    gap: 0.35rem;
   }
   nav.open {
     display: flex;
+    animation: menuSlideDown .18s ease-out;
+  }
+  nav a {
+    padding: 0.75rem 1rem;
+    font-size: 0.98rem;
+    border-radius: 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    display: block;
+  }
+  nav a:last-child {
+    border-bottom: 0;
+  }
+}
+
+@keyframes menuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -424,11 +458,15 @@ section.blok > .wrap > h2,
 }
 
 .statline {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   border-top: 1px solid var(--garis);
   border-bottom: 1px solid var(--garis);
   background: var(--kertas);
+}
+
+.statgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0;
 }
 
 .stat {
@@ -438,6 +476,11 @@ section.blok > .wrap > h2,
 
 .stat:last-child {
   border-right: 0;
+}
+
+.g-news {
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
 }
 
 .stat b {
@@ -1032,6 +1075,209 @@ form.kontak textarea {
   min-width: 110px;
   font-size: 0.85rem;
   font-weight: 500;
+}
+
+/* Mobile-first enhancements & responsive refinements */
+@media (max-width: 860px) {
+  .g-news {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    width: min(1120px, 100% - 1.5rem);
+  }
+
+  section.blok {
+    padding: 2.25rem 0;
+  }
+
+  .page-title {
+    padding: 1.75rem 0 1.25rem;
+  }
+
+  .page-title h1 {
+    font-size: 1.85rem;
+  }
+
+  .hero .wrap {
+    padding: 2.75rem 0 2.25rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.02rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero .btn,
+  .hero .btn.ghost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 0.6rem;
+    min-height: 46px;
+    font-size: 0.98rem;
+  }
+
+  .statgrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat {
+    padding: 0.95rem 0.85rem;
+    border-right: 1px solid var(--garis);
+    border-bottom: 1px solid var(--garis);
+  }
+
+  .stat:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .stat:nth-child(5) {
+    grid-column: span 2;
+    border-bottom: 0;
+    text-align: center;
+    padding: 1rem 0.85rem;
+  }
+
+  .stat b {
+    font-size: 1.6rem;
+  }
+
+  .g4 {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .layanan-card {
+    padding: 1rem 0.85rem;
+  }
+
+  .layanan-card h3 {
+    font-size: 0.95rem;
+  }
+
+  details.syarat {
+    padding: 0 1rem;
+    margin-bottom: 0.65rem;
+  }
+
+  details.syarat summary {
+    padding: 0.85rem 0;
+    font-size: 1rem;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.5rem;
+  }
+
+  details.syarat .waktu {
+    display: block;
+    width: 100%;
+    font-size: 0.8rem;
+    order: 3;
+    padding-left: 2rem;
+    margin-top: 0.15rem;
+  }
+
+  details.syarat summary::after {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .pengumuman li {
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem 0;
+  }
+
+  .pengumuman time {
+    min-width: 0;
+    font-size: 0.78rem;
+  }
+
+  table {
+    font-size: 0.88rem;
+  }
+
+  th, td {
+    padding: 0.55rem 0.65rem;
+  }
+
+  th {
+    width: 44%;
+  }
+
+  .bars li {
+    grid-template-columns: 110px 1fr 50px;
+    gap: 0.5rem;
+    font-size: 0.84rem;
+  }
+
+  .tools {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  input[type=search],
+  select {
+    width: 100%;
+    min-width: 0;
+    padding: 0.75rem 0.85rem;
+    font-size: 16px;
+  }
+
+  form.kontak input,
+  form.kontak textarea {
+    font-size: 16px;
+    padding: 0.75rem 0.85rem;
+  }
+
+  form.kontak button {
+    width: 100%;
+    min-height: 46px;
+    font-size: 0.98rem;
+  }
+
+  .person {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  .person.l1 {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  .site-footer {
+    padding: 2rem 0 1.25rem;
+  }
+
+  .site-footer .wrap.grid.g3 {
+    gap: 1.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .g4 {
+    grid-template-columns: 1fr;
+  }
+
+  .bars li {
+    grid-template-columns: 95px 1fr 45px;
+    font-size: 0.78rem;
+  }
+
+  .brand small {
+    font-size: 0.7rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
