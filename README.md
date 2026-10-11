@@ -8,11 +8,11 @@
 [![Dependencies](https://img.shields.io/badge/Dependencies-Zero-B8892B?style=flat-square)](https://github.com/sqiftree/website-desa-jetis)
 [![License](https://img.shields.io/badge/License-MIT-gray?style=flat-square)](LICENSE)
 
-🌐 **Akses Website Langsung:** [https://sqiftree.github.io/website-desa-jetis/](https://sqiftree.github.io/website-desa-jetis/)
+**Tautan Website:** [https://sqiftree.github.io/website-desa-jetis/](https://sqiftree.github.io/website-desa-jetis/)
 
 ---
 
-## 📌 Ringkasan Proyek
+## Ringkasan Proyek
 
 Website ini dibangun sebagai portal digital resmi untuk menghadirkan transparansi informasi publik, pengenalan profil wilayah, serta panduan layanan administrasi terpadu bagi warga **Desa Jetis**, Kecamatan Jaten, Kabupaten Karanganyar.
 
@@ -20,14 +20,14 @@ Dikembangkan dengan arsitektur **Zero-Dependency Vanilla Web** murni (HTML5, CSS
 
 ---
 
-## ✨ Fitur Utama
+## Fitur Utama
 
-- **Beranda & Ringkasan Wilayah:**
+- **Beranda dan Ringkasan Wilayah:**
   - Banner informasi dan ringkasan metrik demografi desa (6.253 jiwa, 1.850 KK, 14 RW, 64 RT, luas 262,61 Ha).
   - Sekilas sejarah, visi desa, dan galeri pendopo balai desa di Dusun Gempol Rejo.
   - Kartu akses cepat layanan kependudukan dan daftar penghargaan resmi.
 
-- **Profil Wilayah & Sejarah Otentik:**
+- **Profil Wilayah dan Sejarah Otentik:**
   - Catatan sejarah asal mula Dusun Nilorejo (era kolonial Belanda) dan Dusun Jetis Kulon sebagai sentra penggilingan padi masa Mbah Demang.
   - Sejarah pemindahan pusat Balai Desa ke Dusun Gempol Rejo pada tahun 1970-an oleh Kades Taryoko.
   - Visi, misi pembangunan, tugas pokok, fungsi, dan lembaga kemasyarakatan (BPD, LPMD, PKK, Karang Taruna, Linmas).
@@ -35,7 +35,7 @@ Dikembangkan dengan arsitektur **Zero-Dependency Vanilla Web** murni (HTML5, CSS
 - **Struktur Organisasi Pemerintahan:**
   - Bagan hierarki kepemimpinan Pemerintah Desa Jetis mulai dari Kepala Desa (Nur Wibowo, S.T.), Sekretaris Desa (Triyanto, S.E.), jajaran Kepala Seksi (Kasi), Kepala Urusan (Kaur), hingga para Kepala Dusun (Kadus).
 
-- **Data Wilayah & Monografi Kependudukan:**
+- **Data Wilayah dan Monografi Kependudukan:**
   - Tabel batas wilayah geografis (Desa Brujul, Desa Dagen, Desa Ngringo, Kec. Tasikmadu) dan 12 dusun.
   - Visualisasi batang distribusi penggunaan lahan, komposisi agama, jenjang pendidikan, serta mata pencaharian penduduk.
   - Direktori sarana dan prasarana pendidikan, kesehatan, peribadatan, dan fasilitas umum desa.
@@ -44,19 +44,19 @@ Dikembangkan dengan arsitektur **Zero-Dependency Vanilla Web** murni (HTML5, CSS
   - Panduan persyaratan berkas dan estimasi waktu penyelesaian (Akta Kelahiran 3–6 hari, Pengantar KTP-el & KK, Pengantar Nikah Model N ke KUA, Surat Keterangan Kematian, Pindah-Datang SKPWNI, dan SKU/SKTM).
   - Jadwal operasional loket pelayanan kantor desa.
 
-- **Publikasi, Berita & Pengumuman:**
+- **Publikasi, Berita dan Pengumuman:**
   - Portal artikel kegiatan resmi dengan fitur pencarian teks instan (*live search*) dan filter kategori dinamis.
   - Halaman baca detail artikel berita dan papan pengumuman resmi berkala.
 
-- **Galeri Dokumentasi & Media:**
+- **Galeri Dokumentasi dan Media:**
   - Album foto dokumentasi kegiatan fisik, musyawarah, dan pelayanan posyandu yang dilengkapi fitur tampilan *lightbox* interaktif.
 
-- **Kontak & Lokasi Terintegrasi:**
+- **Kontak dan Lokasi Terintegrasi:**
   - Informasi kontak resmi, alamat balai desa, kanal email, WhatsApp, formulir aspirasi warga terpadu, serta peta Google Maps interaktif.
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 | Komponen | Teknologi | Keterangan |
 | :--- | :--- | :--- |
@@ -69,7 +69,7 @@ Dikembangkan dengan arsitektur **Zero-Dependency Vanilla Web** murni (HTML5, CSS
 
 ---
 
-## 📂 Struktur Berkas
+## Struktur Direktori
 
 ```text
 website-desa-jetis/
@@ -89,7 +89,7 @@ website-desa-jetis/
 
 ---
 
-## 🚀 Panduan Menjalankan Secara Lokal
+## Panduan Menjalankan Secara Lokal
 
 Website ini bersifat statis murni sehingga **tidak memerlukan tahapan instalasi (`npm install`) maupun kompilasi build**.
 
@@ -113,7 +113,7 @@ Buka URL lokal yang muncul pada terminal (biasanya `http://localhost:3000`).
 
 ---
 
-## 📚 Sumber Data & Referensi
+## Sumber Data dan Referensi
 
 Data dan monografi yang disajikan pada website ini disadur dari catatan publik resmi:
 1. **Wikipedia Indonesia:** [Jetis, Jaten, Karanganyar](https://id.wikipedia.org/wiki/Jetis,_Jaten,_Karanganyar)
@@ -122,7 +122,7 @@ Data dan monografi yang disajikan pada website ini disadur dari catatan publik r
 
 ---
 
-## 📄 Hak Cipta & Pengembang
+## Hak Cipta dan Pengembang
 
 Proyek ini disusun untuk tugas pembuatan website profil kelurahan/desa oleh:
 - **Wilayah:** Desa Jetis, Kecamatan Jaten, Kabupaten Karanganyar
