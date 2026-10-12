@@ -1116,6 +1116,35 @@ form.kontak textarea {
   font-size: 0.92rem;
 }
 
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.footer-logo {
+  width: 42px;
+  height: 52px;
+  object-fit: contain;
+  flex: none;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.45));
+}
+
+.footer-brand h3 {
+  margin-bottom: 0.15rem;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.footer-brand small {
+  display: block;
+  font-size: 0.78rem;
+  color: #E8D08A;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
 .site-footer h3 {
   color: #fff;
   font-size: 0.95rem;

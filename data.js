@@ -30,7 +30,7 @@ const DATA = {
     ],
     petaEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15816.857859052026!2d110.8941316716471!3d-7.553911146993414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a177b29a485c1%3A0x5027a76e356be90!2sJetis%2C+Jaten%2C+Kabupaten+Karanganyar%2C+Jawa+Tengah!5e0!3m2!1sid!2sid!4v1439288917416",
     sosmed: {
-      facebook: "https://www.facebook.com/desajetisjaten",
+      facebook: "",
       instagram: "",
       youtube: ""
     }

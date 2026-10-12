@@ -268,7 +268,16 @@
     $("#nav").innerHTML = MENU.map(([h, t]) => `<a href="#${h}" data-h="${h}">${t}</a>`).join("");
     const s = D.kontak.sosmed, sm = Object.entries(s).filter(([, v]) => v).map(([k, v]) => `<li><a href="${esc(v)}" target="_blank" rel="noopener">${k}</a></li>`).join("");
     $("#footer").innerHTML = `<div class="wrap grid g3">
-      <div><h3>${esc(nm)}</h3><p>${esc(D.kontak.alamat)}<br>Kec. ${esc(D.kecamatan)}, Kab. ${esc(D.kabupaten)}</p></div>
+      <div>
+        <div class="footer-brand">
+          ${D.lambang ? `<img src="${esc(D.lambang)}" alt="Lambang Kabupaten ${esc(D.kabupaten)}" class="footer-logo">` : ""}
+          <div>
+            <h3>${esc(nm)}</h3>
+            <small>Pemerintah Kab. ${esc(D.kabupaten)}</small>
+          </div>
+        </div>
+        <p>${esc(D.kontak.alamat)}<br>Kec. ${esc(D.kecamatan)}, Kab. ${esc(D.kabupaten)}</p>
+      </div>
       <div><h3>Navigasi</h3><ul>${MENU.map(([h, t]) => `<li><a href="#${h}">${t}</a></li>`).join("")}</ul></div>
       <div><h3>Referensi Resmi</h3><ul>${D.acuan.map(a => `<li><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.nama)}</a></li>`).join("")}${sm}</ul></div>
     </div><div class="wrap copy">© ${new Date().getFullYear()} Pemerintah ${esc(nm)}. Tugas Pembuatan Website Kelurahan/Desa, Kelompok ${esc(D.kelompok)}.</div>`;
