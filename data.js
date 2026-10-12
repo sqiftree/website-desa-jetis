@@ -14,8 +14,8 @@ const DATA = {
   tagline: "Portal resmi informasi publik dan pelayanan administrasi terpadu warga Desa Jetis.",
   hero: "assets/hero.jpg",
   fotoKantor: "assets/kantor.jpg",
-  lambang: "",
-  logo: "",
+  lambang: "assets/logo-karanganyar.png",
+  logo: "assets/logo-karanganyar.png",
 
   // ---------- KONTAK ----------
   kontak: {
@@ -324,7 +324,7 @@ const DATA = {
     }
   ],
   galeri: [
-    { src: "assets/kantor.jpg", keterangan: "Pendopo Balai Desa Jetis di Dusun Gempol Rejo" },
+    { src: "assets/kantor.jpg", keterangan: "Kantor Kepala Desa Jetis di Dusun Gempol Rejo" },
     { src: "assets/musyawarah.jpg", keterangan: "Sosialisasi Pelayanan dan Musyawarah Perangkat Desa Jetis" },
     { src: "assets/kerjabakti.jpg", keterangan: "Gotong Royong Kebersihan Lingkungan dan Saluran Air Warga Desa Jetis" },
     { src: "assets/posyandu.jpg", keterangan: "Pelayanan Posyandu Kesehatan Balita dan Lansia Dusun Gempol Rejo" }

@@ -55,7 +55,7 @@
         <div><h2>Tentang ${esc(nm)}</h2>
           <p>${esc(D.sejarah[0])}</p>
           <a href="#/profil" style="font-weight:600;font-size:.95rem">Baca profil lengkap →</a></div>
-        <div>${D.fotoKantor ? `<figure style="margin:0 0 1rem 0">${gambar(D.fotoKantor, "Pendopo Balai Desa " + D.nama)}<figcaption style="font-size:0.84rem;color:var(--redup);margin-top:0.4rem;font-style:italic">Pendopo Balai Desa ${esc(D.nama)}, Dusun Gempol Rejo</figcaption></figure>` : ""}<div class="card"><h3>Visi desa</h3><p>${esc(D.visi)}</p></div></div>
+        <div>${D.fotoKantor ? `<figure style="margin:0 0 1rem 0">${gambar(D.fotoKantor, "Kantor Kepala Desa " + D.nama)}<figcaption style="font-size:0.84rem;color:var(--redup);margin-top:0.4rem;font-style:italic">Kantor Kepala Desa ${esc(D.nama)}, Dusun Gempol Rejo</figcaption></figure>` : ""}<div class="card"><h3>Visi desa</h3><p>${esc(D.visi)}</p></div></div>
       </div></section>
 
       <section class="blok putih"><div class="wrap">
@@ -117,7 +117,7 @@
       <section class="blok"><div class="wrap grid g2" style="align-items:start">
         <div><h2>Sejarah desa</h2>${D.sejarah.map(p => `<p>${esc(p)}</p>`).join("")}</div>
         <div>
-          ${D.fotoKantor ? `<figure style="margin:0 0 1.25rem 0">${gambar(D.fotoKantor, "Pendopo Balai Desa " + D.nama)}<figcaption style="font-size:0.84rem;color:var(--redup);margin-top:0.4rem;font-style:italic">Pendopo Balai Desa ${esc(D.nama)}, Dusun Gempol Rejo</figcaption></figure>` : ""}
+          ${D.fotoKantor ? `<figure style="margin:0 0 1.25rem 0">${gambar(D.fotoKantor, "Kantor Kepala Desa " + D.nama)}<figcaption style="font-size:0.84rem;color:var(--redup);margin-top:0.4rem;font-style:italic">Kantor Kepala Desa ${esc(D.nama)}, Dusun Gempol Rejo</figcaption></figure>` : ""}
           <div class="card"><h3>Letak geografis</h3><p>${esc(nm)} berada di ${esc(lokasi)}. Wilayah ini memiliki posisi strategis di wilayah perlintasan timur laut Surakarta dengan aksesibilitas tinggi serta perpaduan antara kawasan industri manufaktur terkemuka dan area persawahan produktif.</p></div>
         </div>
       </div></section>
@@ -263,7 +263,7 @@
   /* ---------- shell ---------- */
   function renderShell() {
     document.title = `${nm} — Kecamatan ${D.kecamatan}, Kabupaten ${D.kabupaten}`;
-    $("#brand").innerHTML = `<span class="logo">${D.lambang ? gambar(D.lambang, "Lambang Kabupaten " + D.kabupaten) : esc(inisial(D.nama))}</span>
+    $("#brand").innerHTML = `<span class="logo${D.lambang ? " has-img" : ""}">${D.lambang ? gambar(D.lambang, "Lambang Kabupaten " + D.kabupaten) : esc(inisial(D.nama))}</span>
       <span>${esc(nm)}<small>Pemerintah Kab. ${esc(D.kabupaten)} · Kec. ${esc(D.kecamatan)}</small></span>`;
     $("#nav").innerHTML = MENU.map(([h, t]) => `<a href="#${h}" data-h="${h}">${t}</a>`).join("");
     const s = D.kontak.sosmed, sm = Object.entries(s).filter(([, v]) => v).map(([k, v]) => `<li><a href="${esc(v)}" target="_blank" rel="noopener">${k}</a></li>`).join("");

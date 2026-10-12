@@ -75,8 +75,9 @@ Dikembangkan dengan arsitektur **Zero-Dependency Vanilla Web** murni (HTML5, CSS
 website-desa-jetis/
 ├── assets/
 │   ├── hero.jpg          # Foto lanskap persawahan & wilayah
-│   ├── kantor.jpg        # Foto otentik Pendopo Balai Desa Jetis
+│   ├── kantor.jpg        # Foto otentik Kantor Kepala Desa Jetis
 │   ├── kerjabakti.jpg    # Dokumentasi program kebersihan & TPST 3R
+│   ├── logo-karanganyar.png # Lambang resmi Kabupaten Karanganyar
 │   ├── musyawarah.jpg    # Dokumentasi rapat perangkat desa & sosialisasi
 │   └── posyandu.jpg      # Dokumentasi posyandu lansia & balita
 ├── data.js               # Berkas konfigurasi data, profil, monografi, & berita
