@@ -11,7 +11,7 @@
   const MENU = [
     ["/", "Beranda"], ["/profil", "Profil"], ["/struktur", "Struktur"],
     ["/data", "Data Wilayah"], ["/layanan", "Layanan"], ["/berita", "Berita"],
-    ["/galeri", "Galeri"], ["/kontak", "Kontak"], ["/pengembang", "Pengembang"]
+    ["/galeri", "Galeri"], ["/kontak", "Kontak"]
   ];
 
   /* ---------- komponen kecil ---------- */

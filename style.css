@@ -183,7 +183,15 @@ code {
 nav {
   display: flex;
   gap: 0.2rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
 }
 
 nav a {
@@ -195,6 +203,8 @@ nav a {
   font-weight: 500;
   letter-spacing: 0.01em;
   transition: background-color .15s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -245,6 +255,8 @@ nav a[aria-current=page] {
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
     border-bottom: 2px solid var(--emas);
     gap: 0.35rem;
+    overflow-x: visible;
+    white-space: normal;
   }
   nav.open {
     display: flex;
