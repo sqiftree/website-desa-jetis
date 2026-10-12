@@ -128,4 +128,14 @@ Data dan monografi yang disajikan pada website ini disadur dari catatan publik r
 Proyek ini disusun untuk tugas pembuatan website profil kelurahan/desa oleh:
 - **Wilayah:** Desa Jetis, Kecamatan Jaten, Kabupaten Karanganyar
 - **Kelompok:** Kelompok 8
-- **Pengembang:** [@sqiftree](https://github.com/sqiftree)
+
+### Tim Pengembang
+
+| No | Nama Lengkap | NIM | GitHub |
+|:---:|:---|:---:|:---|
+| 1 | Yashif Victoriawan | L0124124 | [@sqiftree](https://github.com/sqiftree) |
+| 2 | Agischa Nur Aghianingtyas | L0124035 | [@agischa](https://github.com/agischa) |
+| 3 | Marleyn Laura Olivia Veronica Tanamal | L0124023 | [@marleynlaura](https://github.com/marleynlaura) |
+| 4 | Nasywa Rifqia Rahmadany | L0124027 | [@Nasywarifqia](https://github.com/Nasywarifqia) |
+| 5 | Wantech Arofiq Huda Firdausyi | L0124144 | [@kacangcina](https://github.com/kacangcina) |
+

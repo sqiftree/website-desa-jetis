@@ -11,7 +11,7 @@
   const MENU = [
     ["/", "Beranda"], ["/profil", "Profil"], ["/struktur", "Struktur"],
     ["/data", "Data Wilayah"], ["/layanan", "Layanan"], ["/berita", "Berita"],
-    ["/galeri", "Galeri"], ["/kontak", "Kontak"]
+    ["/galeri", "Galeri"], ["/kontak", "Kontak"], ["/pengembang", "Pengembang"]
   ];
 
   /* ---------- komponen kecil ---------- */
@@ -240,8 +240,60 @@
           <div id="terkirim" class="ok" hidden>Pesan Anda berhasil dicatat. Terima kasih atas partisipasi dan masukan Anda.</div>
         </div>
       </div></section>`;
+    },
+
+    "/pengembang"() {
+      const pList = D.pengembang || [];
+      return judulHalaman("Hak Cipta dan Pengembang", `Identitas tim pengembang dan sumber data website resmi ${nm}`) + `
+      <section class="blok"><div class="wrap grid g2" style="align-items:start">
+        <div>
+          <h2>Tentang Proyek</h2>
+          <p>Website profil dan portal pelayanan informasi publik <strong>${esc(nm)}</strong> ini disusun untuk tugas pembuatan website profil kelurahan/desa oleh <strong>Kelompok ${esc(D.kelompok)}</strong>.</p>
+          <div class="card" style="margin-top:1.25rem">
+            <h3>Informasi Tugas</h3>
+            <p style="margin:0 0 .5rem 0"><strong>Wilayah Kajian:</strong> ${esc(nm)}, Kec. ${esc(D.kecamatan)}, Kab. ${esc(D.kabupaten)}</p>
+            <p style="margin:0 0 .5rem 0"><strong>Kelompok:</strong> Kelompok ${esc(D.kelompok)}</p>
+            <p style="margin:0"><strong>Teknologi:</strong> HTML5, Vanilla CSS3, Vanilla JavaScript (Zero Dependencies)</p>
+          </div>
+        </div>
+        <div>
+          <h2>Sumber Data dan Referensi</h2>
+          <p>Data monografi dan informasi publik pada portal ini disadur dari catatan publik resmi:</p>
+          <div class="scroll"><table>
+            ${D.acuan.map(a => `<tr><th scope="row">${esc(a.nama.split(":")[0])}</th><td><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.nama)}</a></td></tr>`).join("")}
+          </table></div>
+        </div>
+      </div></section>
+
+      <section class="blok putih"><div class="wrap">
+        <div class="head">
+          <h2>Tim Pengembang (Kelompok ${esc(D.kelompok)})</h2>
+        </div>
+        <div class="grid g3" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem">
+          ${pList.map((p, idx) => `
+          <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;padding:1.35rem">
+            <div>
+              <div style="display:flex;align-items:center;gap:0.85rem;margin-bottom:0.75rem">
+                <span style="width:46px;height:46px;border-radius:50%;background:var(--padi);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:1.15rem;flex:none">${esc(inisial(p.nama))}</span>
+                <div>
+                  <h3 style="margin:0;font-size:1.02rem;line-height:1.3">${esc(p.nama)}</h3>
+                  <span class="badge-tag" style="margin-top:0.3rem;display:inline-block;font-size:0.78rem">NIM: ${esc(p.nim)}</span>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:0.85rem;padding-top:0.75rem;border-top:1px solid var(--garis);display:flex;align-items:center;justify-content:space-between">
+              <span style="font-size:0.82rem;color:var(--redup)">Anggota #${idx + 1}</span>
+              <a href="${esc(p.github)}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.35rem;font-weight:600;font-size:0.88rem;color:var(--padi)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                @${esc(p.username)} ↗
+              </a>
+            </div>
+          </div>`).join("")}
+        </div>
+      </div></section>`;
     }
   };
+  pages["/hak-cipta"] = pages["/pengembang"];
 
   function beritaCard(b) {
     return `<article class="card berita">
@@ -280,7 +332,7 @@
       </div>
       <div><h3>Navigasi</h3><ul>${MENU.map(([h, t]) => `<li><a href="#${h}">${t}</a></li>`).join("")}</ul></div>
       <div><h3>Referensi Resmi</h3><ul>${D.acuan.map(a => `<li><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.nama)}</a></li>`).join("")}${sm}</ul></div>
-    </div><div class="wrap copy">© ${new Date().getFullYear()} Pemerintah ${esc(nm)}. Tugas Pembuatan Website Kelurahan/Desa, Kelompok ${esc(D.kelompok)}.</div>`;
+    </div><div class="wrap copy">© ${new Date().getFullYear()} Pemerintah ${esc(nm)}. Tugas Pembuatan Website Kelurahan/Desa, <a href="#/pengembang" style="color:inherit;text-decoration:underline">Kelompok ${esc(D.kelompok)} (Hak Cipta &amp; Pengembang)</a>.</div>`;
     if (JSON.stringify(D).includes("[ISI")) $("#notice").hidden = false;
     $("#menuBtn").onclick = () => {
       const o = $("#nav").classList.toggle("open"); $("#menuBtn").setAttribute("aria-expanded", o);

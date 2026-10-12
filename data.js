@@ -5,6 +5,13 @@
 const DATA = {
   // ---------- IDENTITAS ----------
   kelompok: "8",
+  pengembang: [
+    { nama: "Yashif Victoriawan", nim: "L0124124", username: "sqiftree", github: "https://github.com/sqiftree" },
+    { nama: "Agischa Nur Aghianingtyas", nim: "L0124035", username: "agischa", github: "https://github.com/agischa" },
+    { nama: "Marleyn Laura Olivia Veronica Tanamal", nim: "L0124023", username: "marleynlaura", github: "https://github.com/marleynlaura" },
+    { nama: "Nasywa Rifqia Rahmadany", nim: "L0124027", username: "Nasywarifqia", github: "https://github.com/Nasywarifqia" },
+    { nama: "Wantech Arofiq Huda Firdausyi", nim: "L0124144", username: "kacangcina", github: "https://github.com/kacangcina" }
+  ],
   jenis: "Desa",
   nama: "Jetis",
   kecamatan: "Jaten",
